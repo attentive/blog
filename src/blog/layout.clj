@@ -115,7 +115,7 @@
          [:a.nav-link.active {:href "/"} "tomlynch.io"
           [:span.sr-only "(current)"]]]
       [:li.nav-item [:a.nav-link {:href "about.html"} "about"]]
-      [:li.nav-item [:span.nav-link "bookmarks"]]]
+      [:li.nav-item [:span.nav-link "recent reading"]]]
      [:div.hidden-xs.hidden-sm
           (include-js "http://pinboard.in//widgets/v1/linkroll/?user=attentive&count=50&tag=reading")]]
     [:div.col-sm-1.hidden-xs-down]

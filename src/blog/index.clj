@@ -11,4 +11,4 @@
     [:div.row
      (for [post posts]
        (card opts 
-        [:a {:href (:permalink post)}(:title post)]))]))
+        [:h4 [:a {:href (:permalink post)}(:title post)]]))]))

@@ -32,9 +32,9 @@
 	width: 100%;
 }
 
-.sidebar .nav-item + .nav-item {
+/*.sidebar .nav-item + .nav-item {
 	margin-left: 0;
-}
+}*/
 
 .sidebar .nav-link {
 	border-radius: 0;
@@ -42,10 +42,24 @@
 
 /* Sidebar bookmarks */
 #pinboard_linkroll {
-	font-size: 70%;
+	font-size: 0.85em;
 	font-family: $font-family-serif; 
-	margin-left: 15px; 
-	margin-right: 15px; 
+	margin-left: 2.1em; 
+	margin-right: 2.1em;
+
+	.pin-tag {
+		font-size: 0.75em;
+		color: $gray-light;
+	}
+
+	.pin-description {
+		font-size: 0.75em;
+	}
+
+	.pin-item p {
+		border-bottom: 0.5px $gray-lighter solid; 
+		margin-bottom: 0.5rem; 
+	}
 }
 
 /* Cards */
@@ -104,13 +118,21 @@ nav {
 	//margin-right: 20px;
 	//vertical-align: baseline;
 	font-family: $font-family-sans-serif;
+
+	.nav-link {
+		font-size: 1.5rem; 
+	}
+
+	.navbar-brand {
+		font-size: 2rem; 
+	}
 }
 
 nav.raked:after {
         $skew: 44.5deg;
 	content: "";
 	position: absolute;
-	top:54px;  left: 0;
+	top:72px;  left: 0;
 	background-color: inherit;
 	padding-bottom: 80%;
 	width: 57.7%;
@@ -122,6 +144,8 @@ nav.raked:after {
 	-ms-transform: rotate(-$skew) skewX($skew);
 	transform: rotate(-$skew) skewX($skew);
 }
+
+/* Fonts */
 
 body {
 	font-family: $font-family-serif;
@@ -138,12 +162,8 @@ body code, body kbd, body pre, body samp, div.screenplay {
 	font-weight: normal;
 }
 
-h1, h2 {
+h1, h2, h3, h4 {
 	font-family: $font-family-sans-serif;
-}
-
-h3 {
-	font-family: $font-family-serif;
 }
 
 pre {

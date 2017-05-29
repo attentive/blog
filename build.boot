@@ -4,7 +4,9 @@
   :dependencies '[[perun "0.4.2-SNAPSHOT"]
                   [hiccup "1.0.5"]
                   [pandeiro/boot-http "0.6.3-SNAPSHOT"]
-		 
+		
+                  [clj-time "0.13.0"]
+
 		  ; Sass
 		  [deraen/boot-sass "0.3.1" :scope "test"]
 		  [org.webjars.bower/bootstrap "4.0.0-alpha.6" :exclusions [org.webjars.bower/jquery]]])

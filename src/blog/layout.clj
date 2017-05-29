@@ -118,8 +118,8 @@
       [:li.nav-item [:span.nav-link "recent reading"]]]
      [:div.hidden-xs.hidden-sm
           (include-js "http://pinboard.in//widgets/v1/linkroll/?user=attentive&count=50&tag=reading")]]
-    [:div.col-sm-1.hidden-xs-down]
-    (into [] `(:main.col-sm-7.offset-sm-3.pt-3.top-spacer ~@contents))]])
+     [:div.col-sm-1.hidden-xs-down.bg-white]
+    (into [] `(:main.col-sm-8.top-spacer.bg-white ~@contents))]])
 
 (defn with-navbar [{global-meta :meta posts :entries :as opts} & contents]
   (html5 {:lang "en" :itemtype "http://schema.org/Blog"}

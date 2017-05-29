@@ -2,19 +2,21 @@
 @import "bootstrap/scss/bootstrap.scss";
 
 .top-spacer { 
-	margin-top: 100px; 
+	padding-top: 100px; 
 }
 
 /* Sidebar */
 .sidebar {
-	position: fixed;
-	top: 51px;
-	bottom: 0;
-	left: 0;
+	margin-top: 65px; 
+	//position: relative;
+	//top: 51px;
+	//bottom: 0;
+	//left: 0;
+	min-height: 2000px; 
 	z-index: 1000;
-	padding: 20px;
+	//padding: 20px;
 	overflow-x: hidden;
-	overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+	overflow-y: hidden; /* Scrollable contents if viewport is shorter than content. */
 	border-right: 1px solid #eee;
 }
 
@@ -43,7 +45,7 @@
 /* Sidebar bookmarks */
 #pinboard_linkroll {
 	font-size: 0.85em;
-	font-family: $font-family-serif; 
+	font-family: $font-family-serif;
 	margin-left: 2.1em; 
 	margin-right: 2.1em;
 
@@ -57,8 +59,9 @@
 	}
 
 	.pin-item p {
-		border-bottom: 0.5px $gray-lighter solid; 
-		margin-bottom: 0.5rem; 
+		border-bottom: 0.6px $gray-lighter solid; 
+		padding-bottom: 0.5rem;
+		margin-bottom: 0.1rem;
 	}
 }
 
@@ -114,7 +117,6 @@
 /* Navbar */
 
 nav {
-	background-color: $brand-primary; 
 	//margin-right: 20px;
 	//vertical-align: baseline;
 	font-family: $font-family-sans-serif;
@@ -128,15 +130,22 @@ nav {
 	}
 }
 
+nav.raked {
+	background-color: $brand-primary; 
+	//background-repeat: no-repeat; 
+	//background-attachment: fixed; 
+	//background-image: url('../images/beehive.jpg'); 
+}
+
 nav.raked:after {
         $skew: 44.5deg;
+	background-color: inherit; 
 	content: "";
 	position: absolute;
 	top:72px;  left: 0;
-	background-color: inherit;
 	padding-bottom: 80%;
 	width: 57.7%;
-	z-index: -1;
+	z-index: -1; 
 	-webkit-transform-origin: 0 0;
 	-ms-transform-origin: 0 0;
 	transform-origin: 0 0;

@@ -1,0 +1,11 @@
+{
+  "name": "tomlynch.io",
+  "version": "0.1.0",
+  "description": "See build.boot",
+  "license": "MIT",
+  "dependencies": {
+    "bootstrap": "4.1.1",
+    "jquery": "1.9.1",
+    "popper.js": "^1.14.3"
+  }
+}

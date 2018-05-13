@@ -18,7 +18,8 @@
   (with-navbar opts
     [:div.pt-3
      [:div.row
-      [:div.col-10
+      [:div.col-2]
+      [:div.col-8
        [:h1 (:title post)]
        [:div.blog-post (:content post)]]
       [:div.col-2

@@ -9,10 +9,11 @@
                    ~@contents))])
 
 (defn bootstrap-deps []
-  [[:css "/css/tomlynch.css"]
+  [[:css "css/tomlynch.css"]
    [:js "//code.jquery.com/jquery-3.1.1.slim.min.js"]
    [:js "//cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"]
-   [:js "//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"]])
+   [:js "//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"]
+   [:js "reload_client.js"]])
 
 (defn lato-fonts []
   [[:css "http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic"]

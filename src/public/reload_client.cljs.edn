@@ -1,0 +1,2 @@
+{:compiler-options {:asset-path "reload_client.out"
+                    :parallel-build true }}

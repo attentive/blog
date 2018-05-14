@@ -8,7 +8,9 @@
                  [clj-time "0.13.0"]
                  [degree9/boot-npm "1.9.0" :scope "test"] ; npm
                  [deraen/boot-sass "0.3.1" :scope "test"]
-                 [adzerk/boot-reload "0.5.2" :scope "test"]])
+                 [adzerk/boot-reload "0.5.2" :scope "test"]
+                 [adzerk/boot-cljs "2.1.4" :scope "test"]
+                 ])
 
 (require '[clojure.string :as str]
          '[clojure.java.io :as io]
@@ -23,14 +25,8 @@
          '[degree9.boot-npm :as npm]
          '[deraen.boot-sass :refer [sass]]
          '[adzerk.boot-reload :as reload]
+         '[adzerk.boot-cljs :refer [cljs]]
            )
-
-(deftask npm-install
-  "Install NPM dependencies."
-  []
-  (comp (npm/npm :install []
-                 :cache-key ::cache)
-        (npm/node-modules)))
 
 (task-options!
  sass {:source-map true})
@@ -65,13 +61,9 @@
                                                (assoc-in [path :entry :keyword] kw))))
                                        {}))))
    (static :renderer 'blog.about/render :page "about.html")
-   (inject-scripts :scripts #{"start.js"})
+   (inject-scripts :scripts #{"reload_client.js"})
    (sitemap)
-   (npm/npm :install []
-            :cache-key ::cache)
-   (npm/node-modules)
-   (sass)
-   (rss :description "Hashobject blog")
+   (rss :description "tomlynch.io")
    (atom-feed :filterer :original)
    (target)
    (notify)))
@@ -80,5 +72,10 @@
   []
   (comp (watch)
         (reload/reload)
+        (cljs)
         (build)
+        (npm/npm :install []
+                 :cache-key ::cache)
+        (npm/node-modules)
+        (sass)
         (serve :resource-root "public")))

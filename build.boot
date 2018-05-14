@@ -7,7 +7,8 @@
                  [org.clojure/data.json "0.2.6"]
                  [clj-time "0.13.0"]
                  [degree9/boot-npm "1.9.0" :scope "test"] ; npm
-                 [deraen/boot-sass "0.3.1" :scope "test"]])
+                 [deraen/boot-sass "0.3.1" :scope "test"]
+                 [adzerk/boot-reload "0.5.2" :scope "test"]])
 
 (require '[clojure.string :as str]
          '[clojure.java.io :as io]
@@ -20,7 +21,9 @@
          '[blog.post :as post-view]
          '[pandeiro.boot-http :refer [serve]]
          '[degree9.boot-npm :as npm]
-         '[deraen.boot-sass :refer [sass]])
+         '[deraen.boot-sass :refer [sass]]
+         '[adzerk.boot-reload :as reload]
+           )
 
 (deftask npm-install
   "Install NPM dependencies."
@@ -76,5 +79,6 @@
 (deftask dev
   []
   (comp (watch)
+        (reload/reload)
         (build)
         (serve :resource-root "public")))

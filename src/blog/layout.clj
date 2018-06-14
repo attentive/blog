@@ -20,7 +20,7 @@
    [:css "http://fonts.googleapis.com/css?family=Inconsolata:400,700&subset=latin,latin-ext"]])
 
 
-;#_[:body
+;#_[:body.tomlynch
 ; [:div.container
 ;  [:div.row
 ;   [:div.left-bar.col-md-2
@@ -124,7 +124,7 @@
 (defn with-navbar [{global-meta :meta posts :entries :as opts} & contents]
   (html5 {:lang "en" :itemtype "http://schema.org/Blog"}
          (apply head (cons opts (concat (bootstrap-deps) (lato-fonts))))    
-         [:body
+         [:body.tomlynch
           (navbar opts)
           (apply (partial with-sidebar opts) contents)]))
 

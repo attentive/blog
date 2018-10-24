@@ -1,0 +1,24 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the card component.
+// -----------------------------------------------------------------------------
+
+.tl-c-card {
+  float: left;
+  width: 33.333%;
+  padding: .75rem;
+  margin-bottom: 2rem;
+  border: 0;
+}
+
+.tl-c-card-img {
+  margin-bottom: .75rem;
+  height: 280px;
+  width: 100%;
+  display: block;
+}
+
+.tl-c-card-text {
+  font-size: 85%;
+}
+
+

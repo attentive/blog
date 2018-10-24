@@ -2,10 +2,9 @@
   (:require [hiccup.page :refer [html5 include-css include-js]]))
 
 (defn card [{global-meta :meta :as opts} & contents]
-  [:div.card
-   (into [] `(:img {:style "height: 280px; width: 100%; display: block;",
-                    :alt "100%x280",
-                    :data-src "holder.js/100px280/thumb"}
+  [:div.tl-c-card
+   (into [] `(:img.tl-c-card-img {:alt "100%x280",
+                                  :data-src "holder.js/100px280/thumb"}
                    ~@contents))])
 
 (defn bootstrap-deps []
@@ -110,13 +109,14 @@
 (defn with-sidebar [{global-meta :meta posts :entries :as opts} & contents]
   [:div.container-fluid
    [:div.row
-    [:nav.col-sm-3.hidden-xs-down.bg-faded.sidebar
+    [:nav.tl-sidebar.col-sm-3.hidden-xs-down.bg-faded
      [:ul.nav.nav-pills.flex-column
-      #_[:li.nav-item
-         [:a.nav-link.active {:href "/"} "tomlynch.io"
+      #_[:li.tl-sidebar-nav-item.nav-item
+         [:a.tl-sidebar-nav-item.nav-link.active {:href "/"} "tomlynch.io"
           [:span.sr-only "(current)"]]]
-      [:li.nav-item [:a.nav-link {:href "about.html"} "about"]]
-      [:li.nav-item [:span.nav-link "recent reading"]]]
+      [:li.tl-sidebar-nav-item.nav-item
+       [:a.tl-sidebar-nav-link.nav-link {:href "about.html"} "about"]]
+      [:li.tl-sidebad-nav-item.nav-item [:span.nav-link "recent reading"]]]
      [:div.hidden-xs.hidden-sm
           (include-js "http://pinboard.in//widgets/v1/linkroll/?user=attentive&count=50&tag=reading")]]
     (into [] `(:main.col-sm-9.top-spacer ~@contents))]])

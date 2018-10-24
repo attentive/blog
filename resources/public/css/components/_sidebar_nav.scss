@@ -1,0 +1,21 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the sidebar navigation component.
+// -----------------------------------------------------------------------------
+
+nav.tl-sidebar-nav.nav {
+	margin-bottom: 20px;
+}
+
+li.tl-sidebar-nav-item.nav-item {
+	width: 100%;
+}
+
+// .tl-sidebar .nav-item + .nav-item {
+// 	margin-left: 0;
+// }
+
+a.tl-sidebar-nav-link.nav-link {
+	border-radius: 0;
+}
+
+

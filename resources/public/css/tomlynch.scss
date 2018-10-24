@@ -24,7 +24,9 @@
   @import 'layout/sidebar';
 
   // 5. Components
-  @import 'components/button';
+  @import 'components/bookmarks';
+  @import 'components/card';
+  @import 'components/sidebar_nav';
 
   // 6. Page-specific styles
   @import 'pages/home';
@@ -32,82 +34,6 @@
 
   .top-spacer { 
     padding-top: 100px; 
-  }
-
-  /* Sidebar */
-  .sidebar {
-    margin-top: 65px; 
-    //position: relative;
-    //top: 51px;
-    //bottom: 0;
-    //left: 0;
-    min-height: 2000px; 
-    z-index: 1000;
-    //padding: 20px;
-    overflow-x: hidden;
-    overflow-y: hidden; /* Scrollable contents if viewport is shorter than content. */
-    border-right: 1px solid #eee;
-  }
-
-  /* Sidebar navigation */
-  .sidebar {
-    padding-left: 0;
-    padding-right: 0;
-  }
-
-  .sidebar .nav {
-    margin-bottom: 20px;
-  }
-
-  .sidebar .nav-item {
-    width: 100%;
-  }
-
-  /*.sidebar .nav-item + .nav-item {
-  margin-left: 0;
-}*/
-
-  .sidebar .nav-link {
-    border-radius: 0;
-  }
-
-  /* Sidebar bookmarks */
-  #pinboard_linkroll {
-    font-size: 0.85em;
-    font-family: $font-family-serif;
-    margin-left: 2.1em; 
-    margin-right: 2.1em;
-
-    .pin-tag {
-      font-size: 0.75em;
-      color: $gray-light;
-    }
-
-    .pin-description {
-      font-size: 0.75em;
-    }
-
-    .pin-item p {
-      border-bottom: 0.6px $gray-lighter solid; 
-      padding-bottom: 0.5rem;
-      margin-bottom: 0.1rem;
-    }
-  }
-
-  /* Cards */
-
-  .card {
-    float: left;
-    width: 33.333%;
-    padding: .75rem;
-    margin-bottom: 2rem;
-    border: 0;
-  }
-  .card > img {
-    margin-bottom: .75rem;
-  }
-  .card-text {
-    font-size: 85%;
   }
 
   /* Posts */
@@ -216,22 +142,6 @@
 	  border-bottom-style: solid;
 	  border-bottom-width: 1px;
   }
-
-/*.left-bar, 
-.blog-post .main,
-.blog-post .body,
-.blog-post .right-bar {
-	padding-left: 0px;
-	padding-right: 0px;
-}
-
-.blog-post .main {
-	border-top-color: #e7e7e7;
-	border-top-style: solid;
-	border-top-width: 1px;
-	margin-bottom: 20px;
-	padding-bottom: 20px;
-}*/
 
 }
 

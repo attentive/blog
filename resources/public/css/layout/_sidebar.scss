@@ -1,6 +1,6 @@
 // Sidebar
 
-.sidebar {
+.tl-sidebar {
 	margin-top: 65px; 
 	min-height: 2000px; 
 	z-index: 1000;
@@ -11,16 +11,16 @@
 }
 
 // Sidebar navigation 
-.sidebar {
+.tl-sidebar {
 	padding-left: 0;
 	padding-right: 0;
 }
 
-.sidebar .nav {
+.tl-sidebar .nav {
 	margin-bottom: 20px;
 }
 
-.sidebar .nav-item {
+.tl-sidebar .nav-item {
 	width: 100%;
 }
 
@@ -28,7 +28,7 @@
 // 	margin-left: 0;
 // }
 
-.sidebar .nav-link {
+.tl-sidebar .nav-link {
 	border-radius: 0;
 }
 

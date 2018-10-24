@@ -1,0 +1,26 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the bookmarks component.
+// -----------------------------------------------------------------------------
+
+#pinboard_linkroll {
+  font-size: 0.85em;
+  font-family: $font-family-serif;
+  margin-left: 2.1em; 
+  margin-right: 2.1em;
+
+  .pin-tag {
+    font-size: 0.75em;
+    color: $gray-light;
+  }
+
+  .pin-description {
+    font-size: 0.75em;
+  }
+
+  .pin-item p {
+    border-bottom: 0.6px $gray-lighter solid; 
+    padding-bottom: 0.5rem;
+    margin-bottom: 0.1rem;
+  }
+}
+
